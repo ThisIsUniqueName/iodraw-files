@@ -34,6 +34,9 @@
         <mxCell id="web-c" value="遗留系统 C&#xa;IP: 192.168.5.100&#xa;无法与 VPC-A 直连&#xa;通过不同宿主机/端口访问" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" parent="cloudpods" vertex="1">
           <mxGeometry x="873" y="185" width="130" height="70" as="geometry" />
         </mxCell>
+        <mxCell id="vpc-b" value="VPC-B (192.168.6.0/24)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;" parent="cloudpods" vertex="1">
+          <mxGeometry x="450" y="60" width="317" height="210" as="geometry" />
+        </mxCell>
         <mxCell id="vpc-a" value="VPC-A (192.168.5.0/24)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;" parent="1" vertex="1">
           <mxGeometry x="220" y="820" width="310" height="210" as="geometry" />
         </mxCell>
@@ -41,13 +44,10 @@
           <mxGeometry x="250" y="830" width="120" height="70" as="geometry" />
         </mxCell>
         <mxCell id="api-a" value="API 服务器 A&#xa;IP: 192.168.5.11&#xa;Node.js&#xa;域名: api-a.example.com" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" parent="1" vertex="1">
-          <mxGeometry x="240" y="945" width="120" height="70" as="geometry" />
+          <mxGeometry x="240" y="947" width="120" height="70" as="geometry" />
         </mxCell>
         <mxCell id="db-a" value="数据库 A&#xa;IP: 192.168.5.20&#xa;MySQL 5.7&#xa;仅内网访问" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="420" y="949" width="100" height="70" as="geometry" />
-        </mxCell>
-        <mxCell id="vpc-b" value="VPC-B (192.168.6.0/24)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;" parent="1" vertex="1">
-          <mxGeometry x="613" y="820" width="317" height="210" as="geometry" />
         </mxCell>
         <mxCell id="web-b" value="Web 服务器 B&#xa;IP: 192.168.6.20&#xa;Tomcat&#xa;域名: web-b.example.com" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="630" y="940" width="120" height="70" as="geometry" />
