@@ -113,14 +113,14 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="edge-eip-host" value="NAT &amp; 路由" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;dashed=1;fontSize=10;" parent="1" source="eip-2" target="cloudpods-host" edge="1">
+        <mxCell id="edge-eip-host" value="NAT &amp; 路由" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;dashed=1;fontSize=10;" parent="1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="270" y="830" />
-              <mxPoint x="110" y="830" />
-              <mxPoint x="110" y="840" />
-              <mxPoint x="865" y="840" />
+              <mxPoint x="272" y="815" />
+              <mxPoint x="868" y="815" />
             </Array>
+            <mxPoint x="272.48" y="1100" as="sourcePoint" />
+            <mxPoint x="867.5144827586209" y="805" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="edge-host-vm-a1" value="DNAT → 192.168.5.10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0000cc;fontSize=10;" parent="1" source="cloudpods-host" target="vm-a1" edge="1">
