@@ -1,119 +1,88 @@
-<mxfile host="app.diagrams.net" modified="2026-06-03T00:00:00.000Z" agent="5.0" etag="drawio-import" version="22.1.0" type="device">
+<mxfile host="www.iodraw.com" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" version="24.7.17">
   <diagram name="CloudPods-Traefik-独立服务器" id="cloudpods-traefik-standalone">
-    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2074" dy="1106" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-
-        <!-- ========== 外部区域 ========== -->
-        <mxCell id="internet" value="互联网用户" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;" vertex="1" parent="1">
+        <mxCell id="internet" value="互联网用户" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;" parent="1" vertex="1">
           <mxGeometry x="600" y="30" width="130" height="60" as="geometry" />
         </mxCell>
-
-        <mxCell id="dns" value="DNS 解析&#xa;(A记录 → 公网IP)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="dns" value="DNS 解析&#xa;(A记录 → 公网IP)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="600" y="130" width="130" height="60" as="geometry" />
         </mxCell>
-
-        <mxCell id="public-ip" value="公网 IP&#xa;(唯一)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" vertex="1" parent="1">
+        <mxCell id="public-ip" value="公网 IP&#xa;(唯一)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="600" y="230" width="130" height="60" as="geometry" />
         </mxCell>
-
-        <!-- 物理路由器 192.168.101.1 -->
-        <mxCell id="router" value="物理路由器&#xa;192.168.101.1&#xa;DNAT规则：&#xa;:80,:443 → 192.168.101.2:80,443&#xa;:2222 → 192.168.101.2:22" style="rhombus;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" vertex="1" parent="1">
+        <mxCell id="router" value="物理路由器&#xa;192.168.101.1&#xa;DNAT规则：&#xa;:80,:443 → 192.168.101.2:80,443&#xa;:2222 → 192.168.101.2:22" style="rhombus;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="550" y="340" width="230" height="100" as="geometry" />
         </mxCell>
-
-        <!-- ========== Traefik 服务器 (192.168.101.2) ========== -->
-        <mxCell id="traefik-server" value="Traefik 服务器 (192.168.101.2)&#xa;• 运行 Traefik 代理&#xa;• SSH 跳板网关 (端口 22)&#xa;• 已配置静态路由：&#xa;  192.168.0.0/16 via 192.168.101.101" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" vertex="1" parent="1">
+        <mxCell id="traefik-server" value="Traefik 服务器 (192.168.101.2)&#xa;• 运行 Traefik 代理&#xa;• SSH 跳板网关 (端口 22)&#xa;• 已配置静态路由：&#xa;  192.168.0.0/16 via 192.168.101.101" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="520" y="500" width="290" height="110" as="geometry" />
         </mxCell>
-
-        <!-- Traefik 详细组件 -->
-        <mxCell id="traefik-proxy" value="Traefik 代理&#xa;• HTTP/HTTPS 路由&#xa;• 自动 Let's Encrypt&#xa;• 域名 → 后端内网 IP" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+        <mxCell id="traefik-proxy" value="Traefik 代理&#xa;• HTTP/HTTPS 路由&#xa;• 自动 Let&#39;s Encrypt&#xa;• 域名 → 后端内网 IP" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="540" y="640" width="130" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="ssh-gateway" value="SSH 网关&#xa;(跳板机)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" vertex="1" parent="1">
+        <mxCell id="ssh-gateway" value="SSH 网关&#xa;(跳板机)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="700" y="640" width="100" height="70" as="geometry" />
         </mxCell>
-
-        <!-- ========== CloudPods 宿主机 (192.168.101.101) ========== -->
-        <mxCell id="cloudpods-host" value="CloudPods 宿主机 (192.168.101.101)&#xa;• net.ipv4.ip_forward=1&#xa;• 作为 VPC 网关&#xa;• 允许转发流量到 VPC 网段" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" vertex="1" parent="1">
+        <mxCell id="cloudpods-host" value="CloudPods 宿主机 (192.168.101.101)&#xa;• net.ipv4.ip_forward=1&#xa;• 作为 VPC 网关&#xa;• 允许转发流量到 VPC 网段" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="530" y="760" width="270" height="80" as="geometry" />
         </mxCell>
-
-        <!-- ========== CloudPods 虚拟网络平台 ========== -->
-        <mxCell id="cloudpods" value="CloudPods 虚拟网络平台" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=14;startSize=30;" vertex="1" parent="1">
+        <mxCell id="cloudpods" value="CloudPods 虚拟网络平台" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=14;startSize=30;" parent="1" vertex="1">
           <mxGeometry x="150" y="880" width="1000" height="280" as="geometry" />
         </mxCell>
-
-        <!-- VPC-A -->
-        <mxCell id="vpc-a" value="VPC-A (192.168.5.0/24)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+        <mxCell id="vpc-a" value="VPC-A (192.168.5.0/24)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;" parent="1" vertex="1">
           <mxGeometry x="30" y="930" width="280" height="210" as="geometry" />
         </mxCell>
-        <mxCell id="web-a" value="Web 服务器 A&#xa;IP: 192.168.5.10&#xa;Nginx + PHP&#xa;域名: web-a.example.com" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1">
+        <mxCell id="web-a" value="Web 服务器 A&#xa;IP: 192.168.5.10&#xa;Nginx + PHP&#xa;域名: web-a.example.com" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="50" y="970" width="120" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="api-a" value="API 服务器 A&#xa;IP: 192.168.5.11&#xa;Node.js&#xa;域名: api-a.example.com" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1">
+        <mxCell id="api-a" value="API 服务器 A&#xa;IP: 192.168.5.11&#xa;Node.js&#xa;域名: api-a.example.com" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="50" y="1060" width="120" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="db-a" value="数据库 A&#xa;IP: 192.168.5.20&#xa;MySQL 5.7&#xa;仅内网访问" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" vertex="1" parent="1">
+        <mxCell id="db-a" value="数据库 A&#xa;IP: 192.168.5.20&#xa;MySQL 5.7&#xa;仅内网访问" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="190" y="1020" width="100" height="70" as="geometry" />
         </mxCell>
-
-        <!-- VPC-B -->
-        <mxCell id="vpc-b" value="VPC-B (192.168.6.0/24)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+        <mxCell id="vpc-b" value="VPC-B (192.168.6.0/24)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;" parent="1" vertex="1">
           <mxGeometry x="360" y="930" width="280" height="210" as="geometry" />
         </mxCell>
-        <mxCell id="web-b" value="Web 服务器 B&#xa;IP: 192.168.6.20&#xa;Tomcat&#xa;域名: web-b.example.com" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1">
+        <mxCell id="web-b" value="Web 服务器 B&#xa;IP: 192.168.6.20&#xa;Tomcat&#xa;域名: web-b.example.com" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="380" y="970" width="120" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="db-b" value="数据库 B&#xa;IP: 192.168.6.30&#xa;PostgreSQL 13&#xa;仅内网访问" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" vertex="1" parent="1">
+        <mxCell id="db-b" value="数据库 B&#xa;IP: 192.168.6.30&#xa;PostgreSQL 13&#xa;仅内网访问" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="520" y="1020" width="100" height="70" as="geometry" />
         </mxCell>
-
-        <!-- VPC-C (重叠网段示例) -->
-        <mxCell id="vpc-c" value="VPC-C (192.168.5.0/24)&#xa;重叠网段（特殊处理）" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontStyle=1;" vertex="1" parent="1">
-          <mxGeometry x="690" y="930" width="280" height="210" as="geometry" />
+        <mxCell id="vpc-c" value="VPC-C (192.168.5.0/24)&#xa;重叠网段（特殊处理）" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontStyle=1;" parent="1" vertex="1">
+          <mxGeometry x="700" y="930" width="280" height="210" as="geometry" />
         </mxCell>
-        <mxCell id="web-c" value="遗留系统 C&#xa;IP: 192.168.5.100&#xa;无法与 VPC-A 直连&#xa;通过不同宿主机/端口访问" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1">
-          <mxGeometry x="720" y="1010" width="130" height="70" as="geometry" />
+        <mxCell id="web-c" value="遗留系统 C&#xa;IP: 192.168.5.100&#xa;无法与 VPC-A 直连&#xa;通过不同宿主机/端口访问" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="730" y="1010" width="130" height="70" as="geometry" />
         </mxCell>
-
-        <!-- ========== 连线与路由标识 ========== -->
-        <!-- 外部链路 -->
-        <mxCell id="edge-inet-dns" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="internet" target="dns">
+        <mxCell id="edge-inet-dns" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="internet" target="dns" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="edge-dns-ip" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="dns" target="public-ip">
+        <mxCell id="edge-dns-ip" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="dns" target="public-ip" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="edge-ip-router" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="public-ip" target="router">
+        <mxCell id="edge-ip-router" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="public-ip" target="router" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="edge-router-traefik" value="DNAT 80/443, 2222" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=11;" edge="1" parent="1" source="router" target="traefik-server">
+        <mxCell id="edge-router-traefik" value="DNAT 80/443, 2222" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=11;" parent="1" source="router" target="traefik-server" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <!-- Traefik 服务器内部链路 -->
-        <mxCell id="edge-server-proxy" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="traefik-server" target="traefik-proxy">
+        <mxCell id="edge-server-proxy" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" parent="1" source="traefik-server" target="traefik-proxy" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="edge-server-ssh" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" edge="1" parent="1" source="traefik-server" target="ssh-gateway">
+        <mxCell id="edge-server-ssh" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" parent="1" source="traefik-server" target="ssh-gateway" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <!-- Traefik 代理 → CloudPods 宿主机（转发） -->
-        <mxCell id="edge-proxy-host" value="转发流量 (经路由)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fontSize=10;" edge="1" parent="1" source="traefik-proxy" target="cloudpods-host">
+        <mxCell id="edge-proxy-host" value="转发流量 (经路由)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fontSize=10;" parent="1" source="traefik-proxy" target="cloudpods-host" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <!-- 宿主机 → VPC 网络（IP 转发） -->
-        <mxCell id="edge-host-vpc" value="IP 转发 &amp; 路由" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fontSize=10;" edge="1" parent="1" source="cloudpods-host" target="cloudpods">
+        <mxCell id="edge-host-vpc" value="IP 转发 &amp; 路由" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fontSize=10;" parent="1" source="cloudpods-host" target="cloudpods" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <!-- Traefik 直接访问 VM（经过宿主机转发） -->
-        <mxCell id="edge-proxy-vpc-a" value="访问 VPC-A VM" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;dashed=1;fontSize=10;" edge="1" parent="1" source="traefik-proxy" target="vpc-a">
+        <mxCell id="edge-proxy-vpc-a" value="访问 VPC-A VM" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;dashed=1;fontSize=10;" parent="1" source="traefik-proxy" target="vpc-a" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="605" y="740" />
@@ -122,7 +91,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="edge-proxy-vpc-b" value="访问 VPC-B VM" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;dashed=1;fontSize=10;" edge="1" parent="1" source="traefik-proxy" target="vpc-b">
+        <mxCell id="edge-proxy-vpc-b" value="访问 VPC-B VM" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=1;dashed=1;fontSize=10;" parent="1" source="traefik-proxy" target="vpc-b" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="605" y="760" />
@@ -131,43 +100,36 @@
             </Array>
           </mxGeometry>
         </mxCell>
-
-        <!-- Web/API 到数据库的内网访问 -->
-        <mxCell id="edge-web-a-db-a" value="内网访问" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#0000cc;fontSize=10;" edge="1" parent="1" source="web-a" target="db-a">
+        <mxCell id="edge-web-a-db-a" value="内网访问" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#0000cc;fontSize=10;" parent="1" source="web-a" target="db-a" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="edge-api-a-db-a" value="内网访问" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#0000cc;fontSize=10;" edge="1" parent="1" source="api-a" target="db-a">
+        <mxCell id="edge-api-a-db-a" value="内网访问" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#0000cc;fontSize=10;" parent="1" source="api-a" target="db-a" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="edge-web-b-db-b" value="内网访问" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#0000cc;fontSize=10;" edge="1" parent="1" source="web-b" target="db-b">
+        <mxCell id="edge-web-b-db-b" value="内网访问" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#0000cc;fontSize=10;" parent="1" source="web-b" target="db-b" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <!-- SSH 访问路径 -->
-        <mxCell id="edge-ssh-user" value="ssh -p 2222 user@公网IP" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#b85450;fontSize=10;" edge="1" parent="1" source="internet" target="router">
+        <mxCell id="edge-ssh-user" value="ssh -p 2222 user@公网IP" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#b85450;fontSize=10;" parent="1" source="internet" target="router" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="edge-ssh-gateway" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#b85450;" edge="1" parent="1" source="ssh-gateway" target="cloudpods-host">
+        <mxCell id="edge-ssh-gateway" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#b85450;" parent="1" source="ssh-gateway" target="cloudpods-host" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="edge-ssh-to-vm" value="跳板登录" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#b85450;fontSize=10;" edge="1" parent="1" source="cloudpods-host" target="vpc-a">
+        <mxCell id="edge-ssh-to-vm" value="跳板登录" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#b85450;fontSize=10;" parent="1" source="cloudpods-host" target="vpc-a" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-
-        <!-- 图例区域 -->
-        <mxCell id="legend" value="图例" style="swimlane;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;startSize=20;" vertex="1" parent="1">
+        <mxCell id="legend" value="图例" style="swimlane;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;startSize=20;" parent="1" vertex="1">
           <mxGeometry x="20" y="40" width="200" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="legend-http" value="HTTP/HTTPS 流量" style="line;strokeWidth=2;html=1;fontSize=10;" vertex="1" parent="1">
+        <mxCell id="legend-http" value="HTTP/HTTPS 流量" style="line;strokeWidth=2;html=1;fontSize=10;" parent="1" vertex="1">
           <mxGeometry x="40" y="70" width="120" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="legend-db" value="数据库内网访问" style="line;strokeColor=#0000cc;dashed=1;html=1;fontSize=10;" vertex="1" parent="1">
+        <mxCell id="legend-db" value="数据库内网访问" style="line;strokeColor=#0000cc;dashed=1;html=1;fontSize=10;" parent="1" vertex="1">
           <mxGeometry x="40" y="100" width="120" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="legend-ssh" value="SSH 管理通道" style="line;strokeColor=#b85450;html=1;fontSize=10;" vertex="1" parent="1">
+        <mxCell id="legend-ssh" value="SSH 管理通道" style="line;strokeColor=#b85450;html=1;fontSize=10;" parent="1" vertex="1">
           <mxGeometry x="40" y="130" width="120" height="20" as="geometry" />
         </mxCell>
-
       </root>
     </mxGraphModel>
   </diagram>
