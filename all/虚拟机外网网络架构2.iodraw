@@ -29,10 +29,10 @@
           <mxGeometry x="150" y="760" width="1090" height="300" as="geometry" />
         </mxCell>
         <mxCell id="vpc-c" value="VPC-C (192.168.5.0/24)&#xa;重叠网段（特殊处理）" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontStyle=1;" parent="cloudpods" vertex="1">
-          <mxGeometry x="760" y="60" width="280" height="210" as="geometry" />
+          <mxGeometry x="800" y="60" width="280" height="210" as="geometry" />
         </mxCell>
         <mxCell id="web-c" value="遗留系统 C&#xa;IP: 192.168.5.100&#xa;无法与 VPC-A 直连&#xa;通过不同宿主机/端口访问" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" parent="cloudpods" vertex="1">
-          <mxGeometry x="833" y="185" width="130" height="70" as="geometry" />
+          <mxGeometry x="873" y="185" width="130" height="70" as="geometry" />
         </mxCell>
         <mxCell id="vpc-a" value="VPC-A (192.168.5.0/24)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;" parent="1" vertex="1">
           <mxGeometry x="160" y="820" width="310" height="210" as="geometry" />
@@ -47,13 +47,13 @@
           <mxGeometry x="340" y="930" width="100" height="70" as="geometry" />
         </mxCell>
         <mxCell id="vpc-b" value="VPC-B (192.168.6.0/24)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;" parent="1" vertex="1">
-          <mxGeometry x="533" y="820" width="317" height="210" as="geometry" />
+          <mxGeometry x="613" y="820" width="317" height="210" as="geometry" />
         </mxCell>
         <mxCell id="web-b" value="Web 服务器 B&#xa;IP: 192.168.6.20&#xa;Tomcat&#xa;域名: web-b.example.com" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" parent="1" vertex="1">
-          <mxGeometry x="550" y="940" width="120" height="70" as="geometry" />
+          <mxGeometry x="630" y="940" width="120" height="70" as="geometry" />
         </mxCell>
         <mxCell id="db-b" value="数据库 B&#xa;IP: 192.168.6.30&#xa;PostgreSQL 13&#xa;仅内网访问" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" parent="1" vertex="1">
-          <mxGeometry x="740" y="940" width="100" height="70" as="geometry" />
+          <mxGeometry x="820" y="940" width="100" height="70" as="geometry" />
         </mxCell>
         <mxCell id="edge-inet-dns" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="internet" target="dns" edge="1">
           <mxGeometry relative="1" as="geometry" />
