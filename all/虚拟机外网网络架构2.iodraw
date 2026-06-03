@@ -82,13 +82,15 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="edge-traefik-vpcb" value="路由: web-b" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fontSize=10;entryX=0.528;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="traefik" target="vpc-b" edge="1">
-          <mxGeometry relative="1" as="geometry">
+          <mxGeometry x="0.0209" y="10" relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="610" y="740" />
-              <mxPoint x="710" y="740" />
-              <mxPoint x="710" y="750" />
-              <mxPoint x="767" y="750" />
+              <mxPoint x="720" y="740" />
+              <mxPoint x="720" y="750" />
+              <mxPoint x="800" y="750" />
+              <mxPoint x="800" y="820" />
             </Array>
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="edge-web-a-db-a" value="内网访问" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#0000cc;fontSize=10;" parent="1" source="web-a" target="db-a" edge="1">
