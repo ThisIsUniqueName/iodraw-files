@@ -28,7 +28,7 @@
         <mxCell id="cloudpods" value="CloudPods 虚拟网络平台" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=14;startSize=30;" parent="1" vertex="1">
           <mxGeometry x="150" y="760" width="1090" height="300" as="geometry" />
         </mxCell>
-        <mxCell id="vpc-c" value="VPC-C (192.168.5.0/24)&#xa;重叠网段（特殊处理）" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontStyle=1;" parent="cloudpods" vertex="1">
+        <mxCell id="vpc-c" value="VPC-C (192.168.5.0/24)&#xa;重叠网段（特殊处理）" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=16;fontStyle=1;verticalAlign=top;" parent="cloudpods" vertex="1">
           <mxGeometry x="800" y="60" width="280" height="210" as="geometry" />
         </mxCell>
         <mxCell id="web-c" value="遗留系统 C&#xa;IP: 192.168.5.100&#xa;无法与 VPC-A 直连&#xa;通过不同宿主机/端口访问" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" parent="cloudpods" vertex="1">
@@ -37,7 +37,7 @@
         <mxCell id="vpc-b" value="VPC-B (192.168.6.0/24)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=16;fontStyle=1;verticalAlign=top;" parent="cloudpods" vertex="1">
           <mxGeometry x="450" y="60" width="317" height="210" as="geometry" />
         </mxCell>
-        <mxCell id="vpc-a" value="VPC-A (192.168.5.0/24)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;" parent="1" vertex="1">
+        <mxCell id="vpc-a" value="VPC-A (192.168.5.0/24)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="220" y="820" width="310" height="210" as="geometry" />
         </mxCell>
         <mxCell id="web-a" value="Web 服务器 A&#xa;IP: 192.168.5.10&#xa;Nginx + PHP&#xa;域名: web-a.example.com" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" parent="1" vertex="1">
