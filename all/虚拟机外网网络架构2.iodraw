@@ -14,7 +14,7 @@
           <mxGeometry x="600" y="230" width="130" height="60" as="geometry" />
         </mxCell>
         <mxCell id="router" value="物理路由器&#xa;192.168.101.1&#xa;DNAT规则：&#xa;:80,:443 → 192.168.101.101:80,443&#xa;:2222 → 192.168.101.101:22" style="rhombus;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" parent="1" vertex="1">
-          <mxGeometry x="550" y="340" width="230" height="100" as="geometry" />
+          <mxGeometry x="500" y="340" width="330" height="100" as="geometry" />
         </mxCell>
         <mxCell id="host" value="宿主机 (192.168.101.101)&#xa;OS: Linux / CloudPods 计算节点&#xa;• net.ipv4.ip_forward=1&#xa;• 防火墙允许 VPC 网段入站&#xa;• 容器：Traefik, SSH 跳板" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="520" y="490" width="290" height="100" as="geometry" />
@@ -85,7 +85,7 @@
         <mxCell id="edge-traefik-vpcb" value="路由: web-b" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fontSize=10;entryX=0.528;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="traefik" target="vpc-b" edge="1">
           <mxGeometry x="0.0209" y="10" relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="670" y="740" />
+              <mxPoint x="665" y="740" />
               <mxPoint x="800" y="740" />
               <mxPoint x="800" y="800" />
               <mxPoint x="767" y="800" />
