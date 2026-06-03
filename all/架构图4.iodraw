@@ -43,17 +43,17 @@
         <mxCell id="eip-4" value="192.168.4.0/24&#xa;EIP 池 C" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="120" y="1040" width="100" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="vpc-a" value="VPC-A (私有 192.168.5.0/24)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;" parent="1" vertex="1">
+        <mxCell id="vpc-a" value="VPC-A (私有 192.168.5.0/24)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="360" y="920" width="260" height="320" as="geometry" />
         </mxCell>
         <mxCell id="vm-a1" value="Web 服务器 A&#xa;私有IP: 192.168.5.10&#xa;绑定 EIP: 192.168.2.10" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" parent="1" vertex="1">
-          <mxGeometry x="380" y="960" width="140" height="60" as="geometry" />
+          <mxGeometry x="410" y="960" width="140" height="60" as="geometry" />
         </mxCell>
         <mxCell id="vm-a2" value="API 服务器 A&#xa;私有IP: 192.168.5.11&#xa;绑定 EIP: 192.168.2.11" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" parent="1" vertex="1">
-          <mxGeometry x="380" y="1040" width="140" height="60" as="geometry" />
+          <mxGeometry x="410" y="1040" width="140" height="60" as="geometry" />
         </mxCell>
         <mxCell id="db-a" value="数据库 A&#xa;私有IP: 192.168.5.20&#xa;无 EIP (内网访问)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" parent="1" vertex="1">
-          <mxGeometry x="380" y="1120" width="140" height="60" as="geometry" />
+          <mxGeometry x="410" y="1120" width="140" height="60" as="geometry" />
         </mxCell>
         <mxCell id="vpc-b" value="VPC-B (私有 192.168.6.0/24)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="660" y="920" width="260" height="320" as="geometry" />
