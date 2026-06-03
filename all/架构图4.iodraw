@@ -29,7 +29,7 @@
           <mxGeometry x="730" y="740" width="270" height="80" as="geometry" />
         </mxCell>
         <mxCell id="cloudpods" value="CloudPods 虚拟网络平台" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=14;startSize=30;" parent="1" vertex="1">
-          <mxGeometry x="150" y="850" width="1000" height="520" as="geometry" />
+          <mxGeometry x="150" y="850" width="1000" height="440" as="geometry" />
         </mxCell>
         <mxCell id="eip-subnets" value="Default VPC - EIP 子网" style="swimlane;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;startSize=25;" parent="1" vertex="1">
           <mxGeometry x="160" y="935" width="170" height="240" as="geometry" />
