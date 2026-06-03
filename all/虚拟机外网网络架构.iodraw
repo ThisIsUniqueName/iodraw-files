@@ -38,7 +38,7 @@
           <mxGeometry x="30" y="120" width="145" height="70" as="geometry" />
         </mxCell>
         <mxCell id="group-b" value="VPC-B｜网段：192.168.6.0/24、192.168.16.0/24、192.168.5.0/24(同A网段)" style="group;fillColor=#fff;strokeColor=#cc3300;html=1;fontSize=11;" parent="1" vertex="1">
-          <mxGeometry x="720" y="320" width="380" height="260" as="geometry" />
+          <mxGeometry x="1120" y="400" width="380" height="260" as="geometry" />
         </mxCell>
         <mxCell id="b-web1" value="Web-VM02\n192.168.6.30:80\n域名：vm02.xxx.com" style="rounded=1;fillColor=#f5f5f5;strokeColor=#666666;html=1;fontSize=9;" parent="group-b" vertex="1">
           <mxGeometry x="30" y="30" width="145" height="70" as="geometry" />
@@ -68,7 +68,7 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="note" value="关键说明：\n1、多VPC重复网段(192.168.5.0/24)依靠Traefik域名区分访问，规避静态路由冲突\n2、仅公网80/443两个端口承载全部20+台VM外网访问\n3、所有业务VM安全组仅放行来源：192.168.101.200内网入站，不暴露公网端口" style="rounded=1;fillColor=#ffffcc;strokeColor=#e69138;html=1;fontSize=10;" parent="1" vertex="1">
-          <mxGeometry x="30" y="620" width="1070" height="120" as="geometry" />
+          <mxGeometry x="190" y="710" width="1070" height="120" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
