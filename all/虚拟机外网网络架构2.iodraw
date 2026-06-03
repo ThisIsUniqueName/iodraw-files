@@ -20,7 +20,7 @@
           <mxGeometry x="520" y="490" width="290" height="100" as="geometry" />
         </mxCell>
         <mxCell id="traefik" value="Traefik 代理&#xa;• HTTP/HTTPS 路由&#xa;• 自动 Let&#39;s Encrypt&#xa;• 支持 Host 规则" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" parent="1" vertex="1">
-          <mxGeometry x="550" y="620" width="120" height="70" as="geometry" />
+          <mxGeometry x="605" y="620" width="120" height="70" as="geometry" />
         </mxCell>
         <mxCell id="ssh-gw" value="SSH 网关&#xa;(端口 22 / 跳板)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="390" y="620" width="100" height="70" as="geometry" />
