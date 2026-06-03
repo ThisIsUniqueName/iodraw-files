@@ -35,16 +35,16 @@
           <mxGeometry x="873" y="185" width="130" height="70" as="geometry" />
         </mxCell>
         <mxCell id="vpc-a" value="VPC-A (192.168.5.0/24)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;" parent="1" vertex="1">
-          <mxGeometry x="160" y="820" width="310" height="210" as="geometry" />
+          <mxGeometry x="220" y="820" width="310" height="210" as="geometry" />
         </mxCell>
         <mxCell id="web-a" value="Web 服务器 A&#xa;IP: 192.168.5.10&#xa;Nginx + PHP&#xa;域名: web-a.example.com" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" parent="1" vertex="1">
-          <mxGeometry x="190" y="830" width="120" height="70" as="geometry" />
+          <mxGeometry x="250" y="830" width="120" height="70" as="geometry" />
         </mxCell>
         <mxCell id="api-a" value="API 服务器 A&#xa;IP: 192.168.5.11&#xa;Node.js&#xa;域名: api-a.example.com" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" parent="1" vertex="1">
-          <mxGeometry x="160" y="950" width="120" height="70" as="geometry" />
+          <mxGeometry x="220" y="950" width="120" height="70" as="geometry" />
         </mxCell>
         <mxCell id="db-a" value="数据库 A&#xa;IP: 192.168.5.20&#xa;MySQL 5.7&#xa;仅内网访问" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" parent="1" vertex="1">
-          <mxGeometry x="340" y="930" width="100" height="70" as="geometry" />
+          <mxGeometry x="400" y="930" width="100" height="70" as="geometry" />
         </mxCell>
         <mxCell id="vpc-b" value="VPC-B (192.168.6.0/24)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;" parent="1" vertex="1">
           <mxGeometry x="613" y="820" width="317" height="210" as="geometry" />
