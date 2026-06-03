@@ -50,7 +50,7 @@
           <mxGeometry x="470" y="975" width="140" height="60" as="geometry" />
         </mxCell>
         <mxCell id="vm-a2" value="API 服务器 A&#xa;私有IP: 192.168.5.11&#xa;绑定 EIP: 192.168.2.11" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" parent="1" vertex="1">
-          <mxGeometry x="410" y="1055" width="140" height="60" as="geometry" />
+          <mxGeometry x="470" y="1055" width="140" height="60" as="geometry" />
         </mxCell>
         <mxCell id="db-a" value="数据库 A&#xa;私有IP: 192.168.5.20&#xa;无 EIP (内网访问)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="410" y="1135" width="140" height="60" as="geometry" />
