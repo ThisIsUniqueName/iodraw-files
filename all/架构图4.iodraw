@@ -1,6 +1,6 @@
 <mxfile host="www.iodraw.com" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" version="24.7.17">
   <diagram name="CloudPods-Traefik-EIP访问" id="cloudpods-traefik-eip">
-    <mxGraphModel dx="2440" dy="1301" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1185" dy="632" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -134,8 +134,8 @@
         <mxCell id="edge-host-vm-a2" value="DNAT → 192.168.5.11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0000cc;fontSize=10;" parent="1" source="cloudpods-host" target="vm-a2" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="665" y="890" />
-              <mxPoint x="480" y="890" />
+              <mxPoint x="665" y="910" />
+              <mxPoint x="480" y="910" />
             </Array>
           </mxGeometry>
         </mxCell>
