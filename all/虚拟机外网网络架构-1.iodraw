@@ -26,7 +26,7 @@
           <mxGeometry x="40" y="680" width="160" height="100" as="geometry" />
         </mxCell>
         <mxCell id="vm-a1" value="VM1 (web-a)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="60" y="710" width="120" height="40" as="geometry" />
+          <mxGeometry x="60" y="740" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="vpc-b" value="VPC-B (192.168.6.0/24)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="260" y="680" width="160" height="100" as="geometry" />
@@ -38,7 +38,7 @@
           <mxGeometry x="480" y="680" width="160" height="100" as="geometry" />
         </mxCell>
         <mxCell id="vm-c1" value="VM3 (web-c)" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="500" y="710" width="120" height="40" as="geometry" />
+          <mxGeometry x="500" y="740" width="120" height="40" as="geometry" />
         </mxCell>
         <mxCell id="edge1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="internet" target="dns" edge="1">
           <mxGeometry relative="1" as="geometry" />
