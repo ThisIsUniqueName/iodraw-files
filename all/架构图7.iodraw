@@ -111,15 +111,6 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="edge-traefik-ssh-eip3" value="TCP:2223 → 192.168.3.20:22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#b85450;strokeWidth=2;dashed=1;fontSize=10;" parent="1" source="traefik-server" target="eip-3" edge="1">
-          <mxGeometry relative="1" as="geometry">
-            <Array as="points">
-              <mxPoint x="580" y="610" />
-              <mxPoint x="490" y="610" />
-              <mxPoint x="490" y="980" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
         <mxCell id="edge-eip-host-2" value="静态路由 + DNAT" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;dashed=1;fontSize=10;" parent="1" source="eip-2" target="cloudpods-host" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
