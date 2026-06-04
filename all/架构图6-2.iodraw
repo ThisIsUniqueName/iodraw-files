@@ -198,7 +198,7 @@
         <mxCell id="sTzPdTrZU-K7lpCQ4xP0-1" value="dns中添加泛域名解析到自己的唯一公网ip" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f9f9f9;strokeColor=#333333;fontSize=10;align=left;" vertex="1" parent="1">
           <mxGeometry x="800" y="190" width="200" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="sTzPdTrZU-K7lpCQ4xP0-3" value="dns中添加泛域名解析到自己的唯一公网ip" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f9f9f9;strokeColor=#333333;fontSize=10;align=left;" vertex="1" parent="1">
+        <mxCell id="sTzPdTrZU-K7lpCQ4xP0-3" value="&lt;span style=&quot;color: rgba(0, 0, 0, 0); font-family: monospace; font-size: 0px; white-space: nowrap;&quot;&gt;%3CmxGraphModel%3E%3Croot%3E%3CmxCell%20id%3D%220%22%2F%3E%3CmxCell%20id%3D%221%22%20parent%3D%220%22%2F%3E%3CmxCell%20id%3D%222%22%20value%3D%22dns%E4%B8%AD%E6%B7%BB%E5%8A%A0%E6%B3%9B%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90%E5%88%B0%E8%87%AA%E5%B7%B1%E7%9A%84%E5%94%AF%E4%B8%80%E5%85%AC%E7%BD%91ip%22%20style%3D%22rounded%3D1%3BwhiteSpace%3Dwrap%3Bhtml%3D1%3BfillColor%3D%23f9f9f9%3BstrokeColor%3D%23333333%3BfontSize%3D10%3Balign%3Dleft%3B%22%20vertex%3D%221%22%20parent%3D%221%22%3E%3CmxGeometry%20x%3D%22800%22%20y%3D%22190%22%20width%3D%22200%22%20height%3D%2250%22%20as%3D%22geometry%22%2F%3E%3C%2FmxCell%3E%3C%2Froot%3E%3C%2FmxGraphModel%3E&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f9f9f9;strokeColor=#333333;fontSize=10;align=left;" vertex="1" parent="1">
           <mxGeometry x="930" y="530" width="200" height="50" as="geometry" />
         </mxCell>
       </root>
