@@ -82,8 +82,8 @@
         <mxCell id="edge-traefik-eip2" value="域名 app-a.com → 192.168.2.10:80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fontSize=10;" parent="1" source="traefik-server" target="eip-2" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="660" y="690" />
-              <mxPoint x="800" y="690" />
+              <mxPoint x="800" y="660" />
+              <mxPoint x="800" y="660" />
             </Array>
           </mxGeometry>
         </mxCell>
