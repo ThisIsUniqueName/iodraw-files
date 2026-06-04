@@ -1,6 +1,6 @@
 <mxfile host="www.iodraw.com" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" version="24.7.17">
   <diagram name="CloudPods-Traefik-EIP" id="cloudpods-traefik-eip-no-ssh-gw">
-    <mxGraphModel dx="1659" dy="885" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="461" dy="246" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -32,7 +32,7 @@
           <mxGeometry x="170" y="920" width="830" height="180" as="geometry" />
         </mxCell>
         <mxCell id="eip-4" value="192.168.4.0/24&#xa;EIP 池 C" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" parent="eip-subnets" vertex="1">
-          <mxGeometry x="365" y="60" width="100" height="60" as="geometry" />
+          <mxGeometry x="440" y="60" width="100" height="60" as="geometry" />
         </mxCell>
         <mxCell id="eip-2" value="192.168.2.0/24&#xa;EIP 池 A" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" parent="eip-subnets" vertex="1">
           <mxGeometry x="570" y="60" width="100" height="60" as="geometry" />
@@ -103,8 +103,8 @@
         <mxCell id="edge-proxy-eip4" value="域名 → EIP:192.168.4.x" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fontSize=10;" parent="1" source="traefik-proxy" target="eip-4" edge="1">
           <mxGeometry x="-0.4463" relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="660" y="960" />
-              <mxPoint x="585" y="960" />
+              <mxPoint x="660" y="970" />
+              <mxPoint x="660" y="970" />
             </Array>
             <mxPoint as="offset" />
           </mxGeometry>
