@@ -229,13 +229,14 @@
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="HBXckXzOfRmCu2JFzfwC-10" value="路由 &amp; NAT" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;dashed=1;fontSize=10;exitX=0.569;exitY=0.961;exitDx=0;exitDy=0;entryX=0.483;entryY=-0.029;entryDx=0;entryDy=0;entryPerimeter=0;exitPerimeter=0;" edge="1" parent="1" source="eip-3">
+        <mxCell id="HBXckXzOfRmCu2JFzfwC-10" value="路由 &amp; NAT" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;dashed=1;fontSize=10;exitX=0.569;exitY=0.961;exitDx=0;exitDy=0;entryX=-0.003;entryY=0.443;entryDx=0;entryDy=0;entryPerimeter=0;exitPerimeter=0;" edge="1" parent="1" source="eip-3" target="cloudpods-host">
           <mxGeometry x="0.1872" relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="670" y="1038" />
-              <mxPoint x="670" y="1110" />
+              <mxPoint x="527" y="1110" />
               <mxPoint x="590" y="1110" />
               <mxPoint x="590" y="1138" />
+              <mxPoint x="520" y="1138" />
+              <mxPoint x="520" y="1165" />
             </Array>
             <mxPoint x="670" y="1050" as="sourcePoint" />
             <mxPoint x="750" y="1138" as="targetPoint" />
