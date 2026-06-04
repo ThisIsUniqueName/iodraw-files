@@ -11,7 +11,7 @@
           <mxGeometry x="600" y="140" width="130" height="60" as="geometry" />
         </mxCell>
         <mxCell id="public-ip" value="公网 IP&#xa;(唯一)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" parent="1" vertex="1">
-          <mxGeometry x="750" y="240" width="130" height="60" as="geometry" />
+          <mxGeometry x="600" y="230" width="130" height="60" as="geometry" />
         </mxCell>
         <mxCell id="router" value="物理路由器&#xa;192.168.101.1&#xa;DNAT规则：&#xa;:80,:443 → 192.168.101.2:80,443&#xa;:2222 → 192.168.101.2:22 (可选SSH)" style="rhombus;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="550" y="340" width="230" height="110" as="geometry" />
@@ -20,7 +20,7 @@
           <mxGeometry x="520" y="500" width="290" height="110" as="geometry" />
         </mxCell>
         <mxCell id="traefik-proxy" value="Traefik 7层代理&#xa;• HTTP/HTTPS 路由&#xa;• 域名 → 后端 EIP" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" parent="1" vertex="1">
-          <mxGeometry x="540" y="640" width="130" height="70" as="geometry" />
+          <mxGeometry x="600" y="670" width="130" height="70" as="geometry" />
         </mxCell>
         <mxCell id="cloudpods-host" value="CloudPods 宿主机 (192.168.101.101)&#xa;• net.ipv4.ip_forward=1&#xa;• EIP 网关 &amp; NAT 转换" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="630" y="760" width="270" height="80" as="geometry" />
