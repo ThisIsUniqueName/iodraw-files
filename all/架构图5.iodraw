@@ -167,12 +167,12 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="edge-ssh-to-vm" value="Traefik 代理转发 SSH → EIP:22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#b85450;fontSize=10;" parent="1" source="traefik-server" target="vm-a1" edge="1">
-          <mxGeometry relative="1" as="geometry">
+          <mxGeometry x="0.0089" relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="665" y="670" />
-              <mxPoint x="450" y="670" />
-              <mxPoint x="450" y="960" />
+              <mxPoint x="665" y="630" />
+              <mxPoint x="450" y="630" />
             </Array>
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="legend" value="图例" style="swimlane;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;startSize=20;" parent="1" vertex="1">
