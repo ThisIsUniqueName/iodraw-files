@@ -158,7 +158,7 @@
         <mxCell id="edge-web-db-b" value="内网访问" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#b85450;fontSize=10;" parent="1" source="vm-b1" target="db-b" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="edge-ssh-user" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#b85450;fontSize=10;" parent="1" source="internet" target="router" edge="1">
+        <mxCell id="edge-ssh-user" value="ssh -p 2222 user@公网IP (可选)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#b85450;fontSize=10;" parent="1" source="internet" target="router" edge="1">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="edge-ssh-to-vm" value="Traefik 代理转发 SSH → EIP:22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#b85450;fontSize=10;" parent="1" source="traefik-server" target="vm-a1" edge="1">
