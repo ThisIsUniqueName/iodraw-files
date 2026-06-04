@@ -166,8 +166,8 @@
         </mxCell>
         <mxCell id="edge-web-db-b" value="内网访问" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#b85450;fontSize=10;" parent="1" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="824.75" y="1400" as="sourcePoint" />
-            <mxPoint x="824.75" y="1440" as="targetPoint" />
+            <mxPoint x="820" y="1400" as="sourcePoint" />
+            <mxPoint x="820" y="1440" as="targetPoint" />
             <Array as="points">
               <mxPoint x="820" y="1400" />
               <mxPoint x="820" y="1440" />
