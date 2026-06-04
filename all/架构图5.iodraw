@@ -29,16 +29,16 @@
           <mxGeometry x="150" y="870" width="1030" height="710" as="geometry" />
         </mxCell>
         <mxCell id="eip-subnets" value="Default VPC - EIP 子网" style="swimlane;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;startSize=25;" parent="1" vertex="1">
-          <mxGeometry x="270" y="920" width="730" height="180" as="geometry" />
+          <mxGeometry x="440" y="920" width="560" height="180" as="geometry" />
         </mxCell>
         <mxCell id="eip-4" value="192.168.4.0/24&#xa;EIP 池 C" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" parent="eip-subnets" vertex="1">
-          <mxGeometry x="440" y="60" width="100" height="60" as="geometry" />
+          <mxGeometry x="210" y="60" width="100" height="60" as="geometry" />
         </mxCell>
         <mxCell id="eip-2" value="192.168.2.0/24&#xa;EIP 池 A" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" parent="eip-subnets" vertex="1">
-          <mxGeometry x="570" y="60" width="100" height="60" as="geometry" />
+          <mxGeometry x="340" y="60" width="100" height="60" as="geometry" />
         </mxCell>
         <mxCell id="eip-3" value="192.168.3.0/24&#xa;EIP 池 B" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" parent="eip-subnets" vertex="1">
-          <mxGeometry x="310" y="60" width="100" height="60" as="geometry" />
+          <mxGeometry x="80" y="60" width="100" height="60" as="geometry" />
         </mxCell>
         <mxCell id="vpc-a" value="VPC-A (私有 192.168.5.0/24)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="440" y="1290" width="240" height="270" as="geometry" />
