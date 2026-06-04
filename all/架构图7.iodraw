@@ -1,6 +1,6 @@
 <mxfile host="www.iodraw.com" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" version="24.7.17">
   <diagram name="CloudPods-Traefik-EIP-Corrected" id="cloudpods-traefik-eip-final">
-    <mxGraphModel dx="1185" dy="632" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2074" dy="1106" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -30,12 +30,6 @@
         </mxCell>
         <mxCell id="vm-a2" value="API 服务器 A(服务器A3)&lt;br&gt;私有IP: 192.168.5.11&lt;br&gt;绑定 EIP: 192.168.2.11" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" parent="cloudpods" vertex="1">
           <mxGeometry x="239" y="620" width="200" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="rCshezdZBBPdL0pseJ7g-1" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" edge="1" parent="cloudpods">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="849" y="320" as="sourcePoint" />
-            <mxPoint x="899" y="270" as="targetPoint" />
-          </mxGeometry>
         </mxCell>
         <mxCell id="eip-subnets" value="Default VPC - EIP 子网（平台内部 NAT 地址池，可被宿主机路由）" style="swimlane;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;startSize=25;" parent="1" vertex="1">
           <mxGeometry x="440" y="920" width="540" height="150" as="geometry" />
