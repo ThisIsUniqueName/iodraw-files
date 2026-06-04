@@ -100,18 +100,19 @@
         <mxCell id="edge-proxy-eip3" value="访问 EIP: 192.168.3.x" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fontSize=10;" parent="1" source="traefik-proxy" target="eip-3" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="605" y="750" />
-              <mxPoint x="270" y="750" />
+              <mxPoint x="605" y="780" />
+              <mxPoint x="270" y="780" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="edge-proxy-eip4" value="访问 EIP: 192.168.4.x" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fontSize=10;" parent="1" source="traefik-proxy" target="eip-4" edge="1">
-          <mxGeometry relative="1" as="geometry">
+          <mxGeometry x="-0.0342" relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="605" y="740" />
-              <mxPoint x="190" y="740" />
+              <mxPoint x="605" y="760" />
+              <mxPoint x="190" y="760" />
               <mxPoint x="190" y="1073" />
             </Array>
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="edge-eip-host" value="NAT &amp; 路由" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;dashed=1;fontSize=10;exitX=1;exitY=0.667;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="eip-4" edge="1">
