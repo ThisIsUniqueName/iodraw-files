@@ -1,6 +1,6 @@
 <mxfile host="www.iodraw.com" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" version="24.7.17">
   <diagram name="CloudPods-Traefik-EIP" id="cloudpods-traefik-eip-no-ssh-gw">
-    <mxGraphModel dx="553" dy="295" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1152" dy="614" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -221,13 +221,22 @@
         <mxCell id="HBXckXzOfRmCu2JFzfwC-9" value="路由 &amp; NAT" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;dashed=1;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.483;entryY=-0.029;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="eip-4" target="cloudpods-host">
           <mxGeometry x="0.1872" relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="660" y="1060" />
-              <mxPoint x="680" y="1060" />
-              <mxPoint x="680" y="1100" />
+              <mxPoint x="660" y="1100" />
               <mxPoint x="740" y="1100" />
             </Array>
             <mxPoint x="860" y="1020" as="sourcePoint" />
             <mxPoint x="890" y="1200" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HBXckXzOfRmCu2JFzfwC-10" value="路由 &amp; NAT" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;dashed=1;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.483;entryY=-0.029;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1">
+          <mxGeometry x="0.1872" relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="670" y="1110" />
+              <mxPoint x="750" y="1110" />
+            </Array>
+            <mxPoint x="670" y="1050" as="sourcePoint" />
+            <mxPoint x="750" y="1138" as="targetPoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
