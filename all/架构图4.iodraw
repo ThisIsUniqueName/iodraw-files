@@ -89,19 +89,20 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="edge-proxy-eip2" value="访问 EIP: 192.168.2.x" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fontSize=10;" parent="1" source="traefik-proxy" target="eip-2" edge="1">
-          <mxGeometry relative="1" as="geometry">
+          <mxGeometry x="-0.0717" relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="605" y="730" />
               <mxPoint x="110" y="730" />
               <mxPoint x="110" y="1140" />
             </Array>
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="edge-proxy-eip3" value="访问 EIP: 192.168.3.x" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fontSize=10;" parent="1" source="traefik-proxy" target="eip-3" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="605" y="780" />
-              <mxPoint x="270" y="780" />
+              <mxPoint x="605" y="770" />
+              <mxPoint x="270" y="770" />
             </Array>
           </mxGeometry>
         </mxCell>
