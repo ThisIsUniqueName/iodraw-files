@@ -1,6 +1,6 @@
 <mxfile host="www.iodraw.com" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" version="24.7.17">
   <diagram name="CloudPods-Traefik-EIP访问" id="cloudpods-traefik-eip">
-    <mxGraphModel dx="1728" dy="922" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="278" dy="148" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -113,14 +113,15 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="edge-eip-host" value="NAT &amp; 路由" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;dashed=1;fontSize=10;" parent="1" edge="1">
+        <mxCell id="edge-eip-host" value="NAT &amp; 路由" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;dashed=1;fontSize=10;exitX=1;exitY=0.667;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="eip-4" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
+              <mxPoint x="320" y="1100" />
               <mxPoint x="340" y="1100" />
               <mxPoint x="340" y="815" />
               <mxPoint x="868" y="815" />
             </Array>
-            <mxPoint x="320" y="1100" as="sourcePoint" />
+            <mxPoint x="330" y="1080" as="sourcePoint" />
             <mxPoint x="867.5144827586209" y="805" as="targetPoint" />
           </mxGeometry>
         </mxCell>
