@@ -25,6 +25,9 @@
         <mxCell id="cloudpods" value="CloudPods 虚拟网络平台" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=14;startSize=30;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="221" y="870" width="1030" height="710" as="geometry" />
         </mxCell>
+        <mxCell id="vm-a2" value="API 服务器 A&#xa;私有IP: 192.168.5.11&#xa;绑定 EIP: 192.168.2.11" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" parent="cloudpods" vertex="1">
+          <mxGeometry x="69" y="540" width="200" height="60" as="geometry" />
+        </mxCell>
         <mxCell id="eip-subnets" value="Default VPC - EIP 子网（平台内部 NAT 地址池，可被宿主机路由）" style="swimlane;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;startSize=25;" parent="1" vertex="1">
           <mxGeometry x="440" y="920" width="540" height="150" as="geometry" />
         </mxCell>
@@ -43,11 +46,8 @@
         <mxCell id="vm-a1" value="Web 服务器 A&#xa;私有IP: 192.168.5.10&#xa;绑定 EIP: 192.168.2.10" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="460" y="1320" width="200" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="vm-a2" value="API 服务器 A&#xa;私有IP: 192.168.5.11&#xa;绑定 EIP: 192.168.2.11" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" parent="1" vertex="1">
-          <mxGeometry x="460" y="1400" width="200" height="60" as="geometry" />
-        </mxCell>
         <mxCell id="db-a" value="数据库 A&#xa;私有IP: 192.168.5.20&#xa;无 EIP (仅内网访问)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" parent="1" vertex="1">
-          <mxGeometry x="460" y="1496" width="200" height="50" as="geometry" />
+          <mxGeometry x="460" y="1410" width="200" height="50" as="geometry" />
         </mxCell>
         <mxCell id="vpc-b" value="VPC-B (私有 192.168.6.0/24)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="730" y="1290" width="190" height="270" as="geometry" />
