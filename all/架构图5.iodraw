@@ -101,10 +101,11 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="edge-proxy-eip4" value="域名 → EIP:192.168.4.x" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fontSize=10;" parent="1" source="traefik-proxy" target="eip-4" edge="1">
-          <mxGeometry relative="1" as="geometry">
+          <mxGeometry x="-0.4463" relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="660" y="1040" />
             </Array>
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="edge-eip-host" value="路由 &amp; NAT" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;dashed=1;fontSize=10;" parent="1" source="eip-2" target="cloudpods-host" edge="1">
