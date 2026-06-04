@@ -101,11 +101,10 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="edge-traefik-vm-c1" value="域名 app-c.com → 192.168.5.100:80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fontSize=10;" parent="1" source="traefik-server" target="vm-c1" edge="1">
-          <mxGeometry x="-0.0431" relative="1" as="geometry">
+          <mxGeometry x="-0.1771" relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="750" y="740" />
-              <mxPoint x="1050" y="740" />
-              <mxPoint x="1050" y="1280" />
+              <mxPoint x="1085" y="740" />
             </Array>
             <mxPoint as="offset" />
           </mxGeometry>
