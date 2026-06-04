@@ -196,7 +196,7 @@
           <mxGeometry x="800" y="30" width="450" height="110" as="geometry" />
         </mxCell>
         <mxCell id="sTzPdTrZU-K7lpCQ4xP0-1" value="dns中添加泛域名解析到自己的唯一公网ip" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f9f9f9;strokeColor=#333333;fontSize=10;align=left;" vertex="1" parent="1">
-          <mxGeometry x="800" y="150" width="200" height="110" as="geometry" />
+          <mxGeometry x="800" y="190" width="200" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
