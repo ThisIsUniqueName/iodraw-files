@@ -131,11 +131,10 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="edge-eip-host-3" value="静态路由 + DNAT" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;dashed=1;fontSize=10;" parent="1" source="eip-3" target="cloudpods-host" edge="1">
+        <mxCell id="edge-eip-host-3" value="静态路由 + DNAT" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;dashed=1;fontSize=10;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="eip-3" target="cloudpods-host" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="540" y="1010" />
-              <mxPoint x="540" y="1120" />
+              <mxPoint x="540" y="1180" />
             </Array>
           </mxGeometry>
         </mxCell>
