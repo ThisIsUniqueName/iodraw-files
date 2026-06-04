@@ -115,9 +115,10 @@
         <mxCell id="edge-eip-host" value="路由 &amp; NAT" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;dashed=1;fontSize=10;" parent="1" source="eip-2" target="cloudpods-host" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="380" y="830" />
-              <mxPoint x="110" y="830" />
-              <mxPoint x="110" y="800" />
+              <mxPoint x="410" y="1150" />
+              <mxPoint x="410" y="830" />
+              <mxPoint x="520" y="830" />
+              <mxPoint x="520" y="800" />
             </Array>
           </mxGeometry>
         </mxCell>
