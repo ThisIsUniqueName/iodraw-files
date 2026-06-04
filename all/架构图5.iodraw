@@ -141,8 +141,8 @@
         <mxCell id="edge-host-vm-b1" value="DNAT → 192.168.6.20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0000cc;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="cloudpods-host" target="vm-b1" edge="1">
           <mxGeometry x="-0.4" y="5" relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="765" y="1220" />
-              <mxPoint x="820" y="1220" />
+              <mxPoint x="765" y="1280" />
+              <mxPoint x="765" y="1280" />
             </Array>
             <mxPoint x="820" y="1070" as="sourcePoint" />
             <mxPoint as="offset" />
@@ -151,8 +151,8 @@
         <mxCell id="edge-host-vm-c1" value="DNAT → 192.168.5.100" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0000cc;fontSize=10;" parent="1" source="cloudpods-host" target="vm-c1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="820" y="1160" />
-              <mxPoint x="1050" y="1160" />
+              <mxPoint x="820" y="1200" />
+              <mxPoint x="1050" y="1200" />
             </Array>
           </mxGeometry>
         </mxCell>
