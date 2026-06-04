@@ -137,10 +137,8 @@
         <mxCell id="edge-host-vm-a2" value="DNAT → 192.168.5.11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0000cc;fontSize=10;exitX=-0.002;exitY=0.389;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="cloudpods-host" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="730" y="770" />
-              <mxPoint x="615" y="770" />
-              <mxPoint x="615" y="870" />
-              <mxPoint x="390" y="870" />
+              <mxPoint x="730" y="780" />
+              <mxPoint x="390" y="780" />
               <mxPoint x="390" y="1075" />
             </Array>
             <mxPoint x="680" y="770.0044827586207" as="sourcePoint" />
