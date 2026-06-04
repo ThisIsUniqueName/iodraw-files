@@ -95,12 +95,15 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="edge-traefik-eip4" value="域名 app-c.com → 192.168.4.100:80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fontSize=10;" parent="1" source="traefik-server" target="eip-4" edge="1">
-          <mxGeometry relative="1" as="geometry">
+        <mxCell id="edge-traefik-eip4" value="域名 app-c.com → 192.168.4.100:80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fontSize=10;" parent="1" edge="1">
+          <mxGeometry x="-0.4545" relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="690" y="700" />
-              <mxPoint x="690" y="920" />
+              <mxPoint x="664.66" y="700" />
+              <mxPoint x="664.66" y="920" />
             </Array>
+            <mxPoint x="664.66" y="650" as="sourcePoint" />
+            <mxPoint x="664.66" y="980" as="targetPoint" />
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="edge-traefik-ssh-eip2" value="TCP:2222 → 192.168.2.10:22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#b85450;strokeWidth=2;dashed=1;fontSize=10;" parent="1" source="traefik-server" target="eip-2" edge="1">
