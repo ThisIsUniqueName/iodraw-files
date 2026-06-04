@@ -203,6 +203,12 @@
         <mxCell id="HBXckXzOfRmCu2JFzfwC-1" value="虚拟服务器&lt;br&gt;私有IP: 192.168.7.100&lt;br&gt;绑定 EIP: 192.168.4.101" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1">
           <mxGeometry x="980" y="1470" width="160" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="HBXckXzOfRmCu2JFzfwC-4" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="700" y="1430" as="sourcePoint" />
+            <mxPoint x="750" y="1380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
