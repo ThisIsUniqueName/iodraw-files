@@ -8,7 +8,7 @@
           <mxGeometry x="600" y="30" width="130" height="60" as="geometry" />
         </mxCell>
         <mxCell id="dns" value="DNS 解析&#xa;(A记录 → 公网IP)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;" parent="1" vertex="1">
-          <mxGeometry x="750" y="130" width="130" height="60" as="geometry" />
+          <mxGeometry x="600" y="140" width="130" height="60" as="geometry" />
         </mxCell>
         <mxCell id="public-ip" value="公网 IP&#xa;(唯一)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" parent="1" vertex="1">
           <mxGeometry x="750" y="240" width="130" height="60" as="geometry" />
@@ -159,7 +159,12 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="edge-ssh-user" value="ssh -p 2222 user@公网IP (可选)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#b85450;fontSize=10;" parent="1" source="internet" target="router" edge="1">
-          <mxGeometry relative="1" as="geometry" />
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="530" y="60" />
+              <mxPoint x="530" y="395" />
+            </Array>
+          </mxGeometry>
         </mxCell>
         <mxCell id="edge-ssh-to-vm" value="Traefik 代理转发 SSH → EIP:22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#b85450;fontSize=10;" parent="1" source="traefik-server" target="vm-a1" edge="1">
           <mxGeometry relative="1" as="geometry">
