@@ -90,9 +90,9 @@
         <mxCell id="edge-traefik-vm-b1" value="域名 app-b.com → 192.168.6.20:80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fontSize=10;" parent="1" source="traefik-server" target="vm-b1" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="680" y="720" />
-              <mxPoint x="825" y="720" />
-              <mxPoint x="825" y="1280" />
+              <mxPoint x="680" y="770" />
+              <mxPoint x="910" y="770" />
+              <mxPoint x="910" y="1370" />
             </Array>
           </mxGeometry>
         </mxCell>
