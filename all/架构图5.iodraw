@@ -1,6 +1,6 @@
 <mxfile host="www.iodraw.com" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" version="24.7.17">
   <diagram name="CloudPods-Traefik-EIP" id="cloudpods-traefik-eip-no-ssh-gw">
-    <mxGraphModel dx="1185" dy="632" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="332" dy="177" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -120,9 +120,10 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="edge-host-vm-a1" value="DNAT → 192.168.5.10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0000cc;fontSize=10;exitX=0.101;exitY=1.039;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="cloudpods-host" target="vm-a1" edge="1">
+        <mxCell id="edge-host-vm-a1" value="DNAT → 192.168.5.10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0000cc;fontSize=10;exitX=0.045;exitY=1.005;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="cloudpods-host" target="vm-a1" edge="1">
           <mxGeometry x="-0.5293" relative="1" as="geometry">
             <Array as="points">
+              <mxPoint x="657" y="1210" />
               <mxPoint x="657" y="1250" />
               <mxPoint x="550" y="1250" />
             </Array>
