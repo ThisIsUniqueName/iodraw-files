@@ -4,6 +4,9 @@
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="vpc-a" value="VPC-A (私有 192.168.5.0/24)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="440" y="1290" width="240" height="270" as="geometry" />
+        </mxCell>
         <mxCell id="internet" value="互联网用户" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;" parent="1" vertex="1">
           <mxGeometry x="600" y="30" width="130" height="60" as="geometry" />
         </mxCell>
@@ -26,7 +29,7 @@
           <mxGeometry x="221" y="870" width="1030" height="710" as="geometry" />
         </mxCell>
         <mxCell id="vm-a2" value="API 服务器 A&#xa;私有IP: 192.168.5.11&#xa;绑定 EIP: 192.168.2.11" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" parent="cloudpods" vertex="1">
-          <mxGeometry x="99" y="590" width="200" height="60" as="geometry" />
+          <mxGeometry x="239" y="620" width="200" height="60" as="geometry" />
         </mxCell>
         <mxCell id="eip-subnets" value="Default VPC - EIP 子网（平台内部 NAT 地址池，可被宿主机路由）" style="swimlane;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;startSize=25;" parent="1" vertex="1">
           <mxGeometry x="440" y="920" width="540" height="150" as="geometry" />
@@ -39,9 +42,6 @@
         </mxCell>
         <mxCell id="eip-3" value="192.168.3.0/24&#xa;EIP 池 B" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" parent="eip-subnets" vertex="1">
           <mxGeometry x="30" y="60" width="110" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="vpc-a" value="VPC-A (私有 192.168.5.0/24)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;verticalAlign=top;" parent="1" vertex="1">
-          <mxGeometry x="440" y="1290" width="240" height="270" as="geometry" />
         </mxCell>
         <mxCell id="vm-a1" value="Web 服务器 A&#xa;私有IP: 192.168.5.10&#xa;绑定 EIP: 192.168.2.10" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="460" y="1320" width="200" height="60" as="geometry" />
