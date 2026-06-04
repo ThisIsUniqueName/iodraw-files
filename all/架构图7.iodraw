@@ -199,7 +199,7 @@
           <mxGeometry x="770" y="30" width="480" height="110" as="geometry" />
         </mxCell>
         <mxCell id="rCshezdZBBPdL0pseJ7g-2" value="&lt;br&gt;多 VPC、多 EIP、多业务动态扩缩场景，Traefik 运维成本远低于 Nginx&lt;br&gt;&lt;br&gt;&lt;div&gt;动态路由&lt;/div&gt;&lt;div&gt;原生 TCP+HTTP/HTTPS 混合代理（一套搞定 web+ssh）&lt;/div&gt;&lt;div&gt;全自动 SSL 证书&lt;/div&gt;&lt;div&gt;自带可视化 Dashboard(监控)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;高并发性能弱（目前平台短期内到达不了超高并发）&lt;/div&gt;&lt;div&gt;具体使用待研究&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f9f9f9;strokeColor=#333333;fontSize=10;align=left;" vertex="1" parent="1">
-          <mxGeometry x="771" y="190" width="480" height="110" as="geometry" />
+          <mxGeometry x="771" y="190" width="480" height="150" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
