@@ -198,6 +198,9 @@
         <mxCell id="flow-note" value="外部访问流程说明（唯一公网 IP: 203.0.113.10）&#xa;1. HTTP/HTTPS: 公网 → 路由器 DNAT → Traefik → 域名路由 → EIP（如192.168.2.10:80）&#xa;2. SSH:       ssh -p 2222 user@公网IP → Traefik TCP → EIP:22&#xa;3. 物理路由器静态路由将 EIP 子网指向宿主机 (192.168.101.101)&#xa;4. 宿主机 DNAT: EIP → 虚拟机私有 IP（如 192.168.2.10 → 192.168.5.10）&#xa;虚拟机绑定 EIP 地址仅为平台内部 NAT 地址，并非真实公网 IP。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f9f9f9;strokeColor=#333333;fontSize=10;align=left;" parent="1" vertex="1">
           <mxGeometry x="770" y="30" width="480" height="110" as="geometry" />
         </mxCell>
+        <mxCell id="rCshezdZBBPdL0pseJ7g-2" value="&lt;br&gt;多 VPC、多 EIP、多业务动态扩缩场景，Traefik 运维成本远低于 Nginx&lt;br&gt;&lt;br&gt;&lt;div&gt;动态路由&lt;/div&gt;&lt;div&gt;原生 TCP+HTTP/HTTPS 混合代理（一套搞定 web+ssh）&lt;/div&gt;&lt;div&gt;全自动 SSL 证书&lt;/div&gt;&lt;div&gt;自带可视化 Dashboard(监控)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;高并发性能弱（目前平台短期内到达不了超高并发）&lt;/div&gt;&lt;div&gt;具体使用待研究&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f9f9f9;strokeColor=#333333;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="771" y="190" width="480" height="110" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
