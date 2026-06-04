@@ -55,7 +55,7 @@
         <mxCell id="vm-b1" value="Web 服务器 B(服务器B1)&lt;br&gt;私有IP: 192.168.6.20&lt;br&gt;绑定 EIP: 192.168.3.20" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="745" y="1340" width="160" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="db-b" value="数据库 B&#xa;私有IP: 192.168.6.30&#xa;无 EIP (仅内网访问)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" parent="1" vertex="1">
+        <mxCell id="db-b" value="数据库 B(服务器B2)&lt;br&gt;私有IP: 192.168.6.30&lt;br&gt;无 EIP (仅内网访问)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="745" y="1440" width="160" height="50" as="geometry" />
         </mxCell>
         <mxCell id="vpc-c" value="VPC-C (私有 192.168.5.0/24 &amp; 192.168.7.0/24)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontStyle=1;verticalAlign=top;" parent="1" vertex="1">
