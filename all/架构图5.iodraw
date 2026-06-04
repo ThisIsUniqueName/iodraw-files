@@ -218,10 +218,11 @@
             <mxPoint x="-1" y="-9" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="HBXckXzOfRmCu2JFzfwC-9" value="路由 &amp; NAT" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;dashed=1;fontSize=10;" edge="1" parent="1">
+        <mxCell id="HBXckXzOfRmCu2JFzfwC-9" value="路由 &amp; NAT" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;dashed=1;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.483;entryY=-0.029;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="eip-4" target="cloudpods-host">
           <mxGeometry x="0.1872" relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="740" y="1020" />
+              <mxPoint x="660" y="1060" />
+              <mxPoint x="740" y="1060" />
               <mxPoint x="740" y="1200" />
             </Array>
             <mxPoint x="860" y="1020" as="sourcePoint" />
