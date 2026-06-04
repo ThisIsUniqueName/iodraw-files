@@ -64,7 +64,7 @@
         <mxCell id="vpc-c" value="VPC-C (私有 192.168.5.0/24)&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontStyle=1;verticalAlign=top;" parent="1" vertex="1">
           <mxGeometry x="960" y="1290" width="190" height="270" as="geometry" />
         </mxCell>
-        <mxCell id="vm-c1" value="遗留系统 C&#xa;私有IP: 192.168.5.100&#xa;绑定 EIP: 192.168.4.100" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" parent="1" vertex="1">
+        <mxCell id="vm-c1" value="虚拟服务器&lt;br&gt;私有IP: 192.168.5.100&lt;br&gt;绑定 EIP: 192.168.4.100" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="980" y="1390" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="edge-inet-dns" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="internet" target="dns" edge="1">
@@ -137,12 +137,12 @@
             <mxPoint x="710" y="1240" as="sourcePoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="edge-host-vm-b1" value="DNAT → 192.168.6.20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0000cc;fontSize=10;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="cloudpods-host" target="vm-b1" edge="1">
+        <mxCell id="edge-host-vm-b1" value="DNAT → 192.168.6.20" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0000cc;fontSize=10;" parent="1" target="vm-b1" edge="1">
           <mxGeometry x="-0.4" y="5" relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="820" y="1070" />
             </Array>
-            <mxPoint x="730" y="1000" as="sourcePoint" />
+            <mxPoint x="820" y="1070" as="sourcePoint" />
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
