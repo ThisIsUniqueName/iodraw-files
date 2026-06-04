@@ -93,9 +93,8 @@
         <mxCell id="edge-proxy-eip3" value="域名 → EIP:192.168.3.x" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fontSize=10;" parent="1" source="traefik-proxy" target="eip-3" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="590" y="705" />
-              <mxPoint x="590" y="810" />
-              <mxPoint x="480" y="810" />
+              <mxPoint x="640" y="750" />
+              <mxPoint x="480" y="750" />
             </Array>
           </mxGeometry>
         </mxCell>
