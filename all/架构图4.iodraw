@@ -116,8 +116,8 @@
         <mxCell id="edge-eip-host" value="NAT &amp; 路由" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;dashed=1;fontSize=10;exitX=1;exitY=0.667;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="eip-4" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="320" y="1100" />
-              <mxPoint x="340" y="1100" />
+              <mxPoint x="320" y="1090" />
+              <mxPoint x="340" y="1090" />
               <mxPoint x="340" y="815" />
               <mxPoint x="868" y="815" />
             </Array>
