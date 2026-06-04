@@ -89,7 +89,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="edge-traefik-vm-b1" value="域名 app-b.com → 192.168.6.20:80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fontSize=10;" parent="1" target="vm-b1" edge="1">
-          <mxGeometry relative="1" as="geometry">
+          <mxGeometry x="-0.1558" relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="690" y="770" />
               <mxPoint x="930" y="770" />
@@ -97,15 +97,17 @@
             </Array>
             <mxPoint x="690" y="640" as="sourcePoint" />
             <mxPoint x="915" y="1370" as="targetPoint" />
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="edge-traefik-vm-c1" value="域名 app-c.com → 192.168.5.100:80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fontSize=10;" parent="1" source="traefik-server" target="vm-c1" edge="1">
-          <mxGeometry relative="1" as="geometry">
+          <mxGeometry x="-0.0431" relative="1" as="geometry">
             <Array as="points">
               <mxPoint x="750" y="740" />
               <mxPoint x="1050" y="740" />
               <mxPoint x="1050" y="1280" />
             </Array>
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="edge-traefik-ssh-a1" value="TCP:2222 → 192.168.5.10:22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#b85450;strokeWidth=2;dashed=1;fontSize=10;" parent="1" source="traefik-server" target="vm-a1" edge="1">
