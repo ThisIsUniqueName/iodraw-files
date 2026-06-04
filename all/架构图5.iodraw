@@ -135,8 +135,8 @@
         <mxCell id="edge-host-vm-a2" value="DNAT → 192.168.5.11" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0000cc;fontSize=10;" parent="1" target="vm-a2" edge="1">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="665" y="890" />
-              <mxPoint x="450" y="890" />
+              <mxPoint x="630" y="950" />
+              <mxPoint x="570" y="950" />
             </Array>
             <mxPoint x="630" y="960" as="sourcePoint" />
           </mxGeometry>
