@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="www.iodraw.com" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" version="24.7.17">
+  <diagram name="CloudPods-Traefik-EIP-优化版" id="cloudpods-traefik-eip-fixed">
+    <mxGraphModel dx="4609" dy="2458" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1200" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <!-- 新增：边界防火墙（安全优化） -->
+        <mxCell id="firewall" value="边界安全防火墙&#xa;仅放行80/443，2222限制运维IP" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffcccc;strokeColor=#cc0000;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="600" y="95" width="130" height="55" as="geometry" />
+        </mxCell>
+        <!-- 互联网 -->
+        <mxCell id="internet" value="互联网用户" style="ellipse;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=14;" parent="1" vertex="1">
+          <mxGeometry x="600" y="30" width="130" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="dns" value="DNS 解析&#xa;(A记录 → 唯一公网IP)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="600" y="170" width="130" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="public-ip" value="公网 IP&#xa;(全局唯一)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=12;" parent="1" vertex="1">
+          <mxGeometry x="600" y="245" width="130" height="55" as="geometry" />
+        </mxCell>
+        <!-- 物理路由器 -->
+        <mxCell id="router" value="物理路由器&#xa;192.168.101.1&#xa;DNAT：80/443→Traefik集群VIP&#xa;2222仅运维源IP→VIP:22" style="rhombus;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="545" y="335" width="240" height="115" as="geometry" />
+        </mxCell>
+        <!-- 优化：Traefik主备集群（替换单机，高可用） -->
+        <mxCell id="traefik-group" value="Traefik主备代理集群&#xa;集群VIP：192.168.101.10&#xa;节点1：192.168.101.2｜节点2：192.168.101.3&#xa;内置WAF+自动SSL+TCP路由" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="510" y="490" width="310" height="125" as="geometry" />
+        </mxCell>
+        <mxCell id="traefik-proxy" value="七层+四层统一转发&#xa;域名→对应EIP地址" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" parent="traefik-group" vertex="1">
+          <mxGeometry x="90" y="35" width="130" height="65" as="geometry" />
+        </mxCell>
+        <!-- 新增：运维监控平台 -->
+        <mxCell id="monitor" value="监控&日志平台&#xa;Prometheus+Loki&#xa;全链路指标采集" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d9d2e9;strokeColor=#76a5af;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="850" y="510" width="150" height="80" as="geometry" />
+        </mxCell>
+        <!-- CloudPods宿主机 -->
+        <mxCell id="cloudpods-host" value="CloudPods 宿主机 (192.168.101.101)&#xa;• net.ipv4.ip_forward=1&#xa;• EIP网关、DNAT/SNAT转换&#xa;• 网卡多队列性能优化" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=11;" parent="1" vertex="1">
+          <mxGeometry x="600" y="1120" width="290" height="85" as="geometry" />
+        </mxCell>
+        <!-- CloudPods平台泳道 -->
+        <mxCell id="cloudpods" value="CloudPods 虚拟网络平台" style="swimlane;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontSize=14;startSize=30;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="210" y="860" width="1050" height="730" as="geometry" />
+        </mxCell>
+        <!-- EIP子网分组，修改命名：业务化EIP池 -->
+        <mxCell id="eip-subnets" value="Default VPC - EIP地址池（三层网关：宿主机192.168.101.101）" style="swimlane;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;startSize=25;" parent="1" vertex="1">
+          <mxGeometry x="430" y="910" width="560" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="eip-4" value="192.168.4.0/24&#xa;EIP池C-通用业务(VPC-C)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" parent="eip-subnets" vertex="1">
+          <mxGeometry x="165" y="62" width="102" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="eip-2" value="192.168.2.0/24&#xa;EIP池A-Web业务(VPC-A)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" parent="eip-subnets" vertex="1">
+          <mxGeometry x="305" y="62" width="102" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="eip-3" value="192.168.3.0/24&#xa;EIP池B-API业务(VPC-B)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" parent="eip-subnets" vertex="1">
+          <mxGeometry x="28" y="62" width="102" height="62" as="geometry" />
+        </mxCell>
+        <!-- VPC-A -->
+        <mxCell id="vpc-a" value="VPC-A (私有：192.168.5.0/24，同VPC子网自动互通)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="430" y="1280" width="250" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="vm-a1" value="Web 服务器 A&#xa;私有IP:192.168.5.10｜EIP:192.168.2.10&#xa;域名：a1.xxx.com｜安全组：仅EIP入站80" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="495" y="1315" width="150" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="vm-a2" value="API 服务器 A&#xa;私有IP:192.168.5.11｜EIP:192.168.2.11&#xa;域名：a2.xxx.com｜安全组：仅EIP入站8080" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="495" y="1395" width="150" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="db-a" value="数据库 A&#xa;私有IP:192.168.5.20｜无EIP&#xa;安全组：仅同VPC Web/API访问3306" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="495" y="1482" width="150" height="62" as="geometry" />
+        </mxCell>
+        <!-- VPC-B -->
+        <mxCell id="vpc-b" value="VPC-B (私有：192.168.6.0/24)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="725" y="1280" width="200" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="vm-b1" value="Web 服务器 B&#xa;私有IP:192.168.6.20｜EIP:192.168.3.20&#xa;域名：b1.xxx.com" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="750" y="1335" width="150" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="db-b" value="数据库 B&#xa;私有IP:192.168.6.30｜无EIP&#xa;安全组：仅同VPC Web访问3306" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="750" y="1435" width="150" height="62" as="geometry" />
+        </mxCell>
+        <!-- VPC-C：保留跨VPC同5段，符合CloudPods规则，标注隔离说明 -->
+        <mxCell id="vpc-c" value="VPC-C (192.168.5.0/24、192.168.7.0/24)&#xa;不同VPC天然隔离，同网段无冲突" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;fontStyle=1;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="955" y="1280" width="210" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="vm-c1" value="服务器C1&#xa;私有IP:192.168.5.100｜EIP:192.168.4.100&#xa;域名：c1.xxx.com" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=10;" parent="1" vertex="1">
+          <mxGeometry x="975" y="1345" width="170" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="HBXckXzOfRmCu2JFzfwC-1" value="服务器C2&#xa;私有IP:192.168.7.100｜EIP:192.168.4.101" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="975" y="1465" width="170" height="62" as="geometry" />
+        </mxCell>
+
+        <!-- 连线优化开始 -->
+        <mxCell id="edge-inet-firewall" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="internet" target="firewall" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="edge-firewall-dns" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="firewall" target="dns" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="edge-dns-ip" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="dns" target="public-ip" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="edge-ip-router" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="public-ip" target="router" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="edge-router-traefik" value="DNAT 80/443全业务、2222受限SSH" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=10;" parent="1" source="router" target="traefik-group" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <!-- 监控连线 -->
+        <mxCell id="edge-traefik-monitor" value="指标/日志采集" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#666666;fontSize=9;" parent="1" source="traefik-group" target="monitor" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="edge-host-monitor" value="宿主机监控采集" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#666666;fontSize=9;" parent="1" source="cloudpods-host" target="monitor" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+
+        <mxCell id="edge-server-proxy" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;" parent="1" source="traefik-group" target="traefik-proxy" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <!-- 修正Traefik→EIP连线标注（补充协议） -->
+        <mxCell id="edge-proxy-eip2" value="HTTP/HTTPS→EIP:192.168.2.x(VPC-A)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fontSize=9;" parent="1" source="traefik-proxy" target="eip-2" edge="1">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="680" y="750" /><mxPoint x="800" y="750" /></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="edge-proxy-eip3" value="HTTP/HTTPS→EIP:192.168.3.x(VPC-B)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fontSize=9;" parent="1" source="traefik-proxy" target="eip-3" edge="1">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="640" y="750" /><mxPoint x="510" y="750" /></Array></mxGeometry>
+        </mxCell>
+        <!-- 修复原eip4重复坐标bug -->
+        <mxCell id="edge-proxy-eip4" value="HTTP/HTTPS→EIP:192.168.4.x(VPC-C)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;fontSize=9;" parent="1" source="traefik-proxy" target="eip-4" edge="1">
+          <mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="660" y="750" /><mxPoint x="660" y="820" /></Array></mxGeometry>
+        </mxCell>
+        <!-- EIP→宿主机 -->
+        <mxCell id="edge-eip-host" value="EIP网关路由+DNAT转换" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;dashed=1;fontSize=9;" parent="1" source="eip-2" target="cloudpods-host" edge="1">
+          <mxGeometry x="0.1872" relative="1" as="geometry"><Array as="points"><mxPoint x="950" y="1010" /><mxPoint x="950" y="1190" /></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="HBXckXzOfRmCu2JFzfwC-9" value="EIP网关路由+DNAT转换" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;dashed=1;fontSize=9;" parent="1" source="eip-4" target="cloudpods-host" edge="1">
+          <mxGeometry x="0.1872" relative="1" as="geometry"><Array as="points"><mxPoint x="660" y="1100" /><mxPoint x="740" y="1100" /></Array><mxPoint x="860" y="1020" as="sourcePoint"/><mxPoint x="890" y="1200" as="targetPoint"/></mxGeometry>
+        </mxCell>
+        <mxCell id="HBXckXzOfRmCu2JFzfwC-10" value="EIP网关路由+DNAT转换" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;dashed=1;fontSize=9;" parent="1" source="eip-3" target="cloudpods-host" edge="1">
+          <mxGeometry x="0.1872" relative="1" as="geometry"><Array as="points"><mxPoint x="527" y="1165" /></Array><mxPoint x="670" y="1050" as="sourcePoint"/><mxPoint x="750" y="1138" as="targetPoint"/></mxGeometry>
+        </mxCell>
+        <!-- 宿主机DNAT到VM，细化端口标注 -->
+        <mxCell id="edge-host-vm-a1" value="DNAT:192.168.2.10:80→192.168.5.10:80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0000cc;fontSize=9;" parent="1" target="vm-a1" edge="1">
+          <mxGeometry x="-0.5293" relative="1" as="geometry"><Array as="points"><mxPoint x="640" y="1210" /><mxPoint x="640" y="1250" /><mxPoint x="550" y="1250" /></Array><mxPoint x="640" y="1210" as="sourcePoint"/></mxGeometry>
+        </mxCell>
+        <mxCell id="edge-host-vm-a2" value="DNAT:192.168.2.11:8080→192.168.5.11:8080" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0000cc;fontSize=9;" parent="1" source="cloudpods-host" target="vm-a2" edge="1"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="700" y="1430" /></Array><mxPoint x="710" y="1240" as="sourcePoint"/></mxGeometry></mxCell>
+        <mxCell id="edge-host-vm-b1" value="DNAT:192.168.3.20:80→192.168.6.20:80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0000cc;fontSize=9;" parent="1" target="vm-b1" edge="1">
+          <mxGeometry x="-0.4" y="5" relative="1" as="geometry"><Array as="points"><mxPoint x="765" y="1280" /><mxPoint x="765" y="1280" /></Array><mxPoint x="765" y="1210" as="sourcePoint"/></mxGeometry>
+        </mxCell>
+        <mxCell id="edge-host-vm-c1" value="DNAT:192.168.4.100:80→192.168.5.100:80" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#0000cc;fontSize=9;" parent="1" source="cloudpods-host" target="vm-c1" edge="1"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="820" y="1260" /><mxPoint x="1050" y="1260" /></Array></mxGeometry>
+        </mxCell>
+        <!-- 同VPC内网数据库连线 -->
+        <mxCell id="edge-web-db-a" value="内网3306访问(仅同VPC放行)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#b85450;fontSize=9;" parent="1" source="vm-a1" target="db-a" edge="1"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="480" y="1350" /><mxPoint x="480" y="1526" /></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="edge-api-db-a" value="内网3306访问(仅同VPC放行)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#b85450;fontSize=9;" parent="1" source="vm-a2" target="db-a" edge="1"><mxGeometry relative="1" as="geometry"/></mxCell>
+        <mxCell id="edge-web-db-b" value="内网3306访问(仅同VPC放行)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#b85450;fontSize=9;" parent="1" edge="1"><mxGeometry relative="1" as="geometry"><mxPoint x="824.75" y="1400" as="sourcePoint"/><mxPoint x="820" y="1440" as="targetPoint"/><Array as="points"><mxPoint x="820" y="1400" /><mxPoint x="820" y="1440" /></Array></mxGeometry>
+        </mxCell>
+        <!-- SSH链路优化：去掉直连公网SSH，改为堡垒思路标注 -->
+        <mxCell id="edge-ssh-user" value="仅运维IP:ssh -p2222 @公网IP" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#b85450;fontSize=9;" parent="1" source="internet" target="router" edge="1"><mxGeometry relative="1" as="geometry"><Array as="points"><mxPoint x="530" y="60" /><mxPoint x="530" y="395" /></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="edge-ssh-to-vm" value="Traefik TCP转发SSH→对应EIP:22" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;strokeColor=#b85450;fontSize=9;" parent="1" source="traefik-group" target="vm-a1" edge="1">
+          <mxGeometry x="0.0089" relative="1" as="geometry"><Array as="points"><mxPoint x="665" y="630" /><mxPoint x="330" y="630" /><mxPoint x="330" y="1330" /></Array></mxGeometry>
+        </mxCell>
+        <mxCell id="HBXckXzOfRmCu2JFzfwC-5" value="" style="endArrow=classic;startArrow=classic;rounded=0;entryX=0.48;entryY=1.034;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.483;exitY=0.05;exitDx=0;exitDy=0;exitPerimeter=0;fontColor=#000000;strokeColor=#B85450;dashed=1;html=1;" edge="1" parent="1" source="HBXckXzOfRmCu2JFzfwC-1" target="vm-c1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry"><mxPoint x="1010" y="1470" as="sourcePoint"/><mxPoint x="1060" y="1420" as="targetPoint"/></mxGeometry>
+        </mxCell>
+        <mxCell id="HBXckXzOfRmCu2JFzfwC-8" value="内网访问" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" vertex="1" connectable="0" parent="HBXckXzOfRmCu2JFzfwC-5"><mxGeometry x="-0.2056" y="1" relative="1" as="geometry"><mxPoint x="-1" y="-9" as="offset"/></mxGeometry></mxCell>
+        <!-- 图例优化 -->
+        <mxCell id="legend" value="图例" style="swimlane;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=12;startSize=20;" parent="1" vertex="1"><mxGeometry x="20" y="30" width="230" height="170" as="geometry"/></mxCell>
+        <mxCell id="legend-http" value="实线：公网→代理HTTP/HTTPS" style="line;strokeWidth=2;html=1;fontSize=10;" parent="1" vertex="1"><mxGeometry x="40" y="60" width="190" height="18" as="geometry"/></mxCell>
+        <mxCell id="legend-traefik-eip" value="蓝实线：Traefik→EIP内网转发" style="line;strokeWidth=2;strokeColor=#0000cc;html=1;fontSize=10;" parent="1" vertex="1"><mxGeometry x="40" y="90" width="190" height="18" as="geometry"/></mxCell>
+        <mxCell id="legend-nat" value="蓝虚线：宿主机DNAT/NAT转换" style="line;strokeWidth=2;strokeColor=#0000cc;dashed=1;html=1;fontSize=10;" parent="1" vertex="1"><mxGeometry x="40" y="120" width="190" height="18" as="geometry"/></mxCell>
+        <mxCell id="legend-inner" value="红虚线：同VPC内网业务访问" style="line;strokeWidth=2;strokeColor=#b85450;dashed=1;html=1;fontSize=10;" parent="1" vertex="1"><mxGeometry x="40" y="150" width="190" height="18" as="geometry"/></mxCell>
+        <!-- 底部备注 -->
+        <mxCell id="note-info" value="架构说明：&#xa;1.不同VPC允许同私有网段，依托EIP+域名区分访问，无需配置私有网段静态路由&#xa;2.全业务仅公网80/443，SSH受限运维源IP，收敛公网暴露面&#xa;3.数据库无EIP，仅同VPC内网访问，安全隔离" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fffde6;strokeColor=#e6b34c;fontSize=10;" parent="1" vertex="1"><mxGeometry x="300" y="100" width="950" height="85" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
