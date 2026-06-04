@@ -26,7 +26,7 @@
           <mxGeometry x="221" y="870" width="1030" height="710" as="geometry" />
         </mxCell>
         <mxCell id="vm-a2" value="API 服务器 A&#xa;私有IP: 192.168.5.11&#xa;绑定 EIP: 192.168.2.11" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" parent="cloudpods" vertex="1">
-          <mxGeometry x="69" y="540" width="200" height="60" as="geometry" />
+          <mxGeometry x="239" y="610" width="200" height="60" as="geometry" />
         </mxCell>
         <mxCell id="eip-subnets" value="Default VPC - EIP 子网（平台内部 NAT 地址池，可被宿主机路由）" style="swimlane;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=11;startSize=25;" parent="1" vertex="1">
           <mxGeometry x="440" y="920" width="540" height="150" as="geometry" />
@@ -39,9 +39,6 @@
         </mxCell>
         <mxCell id="eip-3" value="192.168.3.0/24&#xa;EIP 池 B" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=11;" parent="eip-subnets" vertex="1">
           <mxGeometry x="30" y="60" width="110" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="vpc-a" value="VPC-A (私有 192.168.5.0/24)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;verticalAlign=top;" parent="1" vertex="1">
-          <mxGeometry x="440" y="1290" width="240" height="270" as="geometry" />
         </mxCell>
         <mxCell id="vm-a1" value="Web 服务器 A&#xa;私有IP: 192.168.5.10&#xa;绑定 EIP: 192.168.2.10" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="460" y="1320" width="200" height="60" as="geometry" />
@@ -197,6 +194,9 @@
         </mxCell>
         <mxCell id="flow-note" value="外部访问流程说明（唯一公网 IP: 203.0.113.10）&#xa;1. HTTP/HTTPS: 公网 → 路由器 DNAT → Traefik → 域名路由 → EIP（如192.168.2.10:80）&#xa;2. SSH:       ssh -p 2222 user@公网IP → Traefik TCP → EIP:22&#xa;3. 物理路由器静态路由将 EIP 子网指向宿主机 (192.168.101.101)&#xa;4. 宿主机 DNAT: EIP → 虚拟机私有 IP（如 192.168.2.10 → 192.168.5.10）&#xa;虚拟机绑定 EIP 地址仅为平台内部 NAT 地址，并非真实公网 IP。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f9f9f9;strokeColor=#333333;fontSize=10;align=left;" parent="1" vertex="1">
           <mxGeometry x="770" y="30" width="480" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="vpc-a" value="VPC-A (私有 192.168.5.0/24)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=12;fontStyle=1;verticalAlign=top;" parent="1" vertex="1">
+          <mxGeometry x="440" y="1290" width="240" height="270" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
