@@ -1,6 +1,6 @@
 <mxfile host="www.iodraw.com" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36" version="24.7.17">
   <diagram name="CloudPods-Traefik-EIP-Corrected" id="cloudpods-traefik-eip-final">
-    <mxGraphModel dx="2593" dy="1383" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2183" dy="1164" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -200,6 +200,9 @@
         </mxCell>
         <mxCell id="rCshezdZBBPdL0pseJ7g-2" value="&lt;br&gt;多 VPC、多 EIP、多业务动态扩缩场景，Traefik 运维成本远低于 Nginx&lt;br&gt;&lt;br&gt;&lt;div&gt;动态路由&lt;/div&gt;&lt;div&gt;原生 TCP+HTTP/HTTPS 混合代理（一套搞定 web+ssh）&lt;/div&gt;&lt;div&gt;全自动 SSL 证书&lt;/div&gt;&lt;div&gt;自带可视化 Dashboard(监控)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;高并发性能弱（目前平台短期内到达不了超高并发）&lt;/div&gt;&lt;div&gt;具体使用待研究&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f9f9f9;strokeColor=#333333;fontSize=10;align=left;spacingLeft=10;" vertex="1" parent="1">
           <mxGeometry x="861" y="430" width="349" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="rCshezdZBBPdL0pseJ7g-3" value="dns中添加泛域名解析到自己的唯一公网ip" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f9f9f9;strokeColor=#333333;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="800" y="190" width="200" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
