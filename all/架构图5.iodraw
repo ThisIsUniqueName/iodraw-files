@@ -58,6 +58,9 @@
         <mxCell id="vm-b1" value="Web 服务器 B&#xa;私有IP: 192.168.6.20&#xa;绑定 EIP: 192.168.3.20" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="755" y="1340" width="140" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="HBXckXzOfRmCu2JFzfwC-6" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="db-b" target="vm-b1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="db-b" value="数据库 B&#xa;私有IP: 192.168.6.30&#xa;无 EIP (内网访问)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=11;" parent="1" vertex="1">
           <mxGeometry x="755" y="1440" width="140" height="60" as="geometry" />
         </mxCell>
