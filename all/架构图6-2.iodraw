@@ -195,8 +195,8 @@
         <mxCell id="flow-note" value="外部访问流程说明：&#xa;唯一公网 IP: 203.0.113.10&#xa;├─ :80/:443 → Traefik → 域名路由 → 对应虚拟机内网服务&#xa;├─ :2222   → Traefik TCP → vm-a1:22 (SSH)&#xa;└─ :2223   → Traefik TCP → vm-b1:22 (SSH)&#xa;虚拟机无入站公网 IP，EIP 池仅用于出站 SNAT。" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f9f9f9;strokeColor=#333333;fontSize=10;align=left;" parent="1" vertex="1">
           <mxGeometry x="800" y="30" width="450" height="110" as="geometry" />
         </mxCell>
-        <mxCell id="sTzPdTrZU-K7lpCQ4xP0-1" value="ssh-192.167.2.198.gqchat.com&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f9f9f9;strokeColor=#333333;fontSize=10;align=left;" vertex="1" parent="1">
-          <mxGeometry x="800" y="150" width="450" height="110" as="geometry" />
+        <mxCell id="sTzPdTrZU-K7lpCQ4xP0-1" value="dns中添加泛域名解析到自己的唯一公网ip" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f9f9f9;strokeColor=#333333;fontSize=10;align=left;" vertex="1" parent="1">
+          <mxGeometry x="800" y="150" width="200" height="110" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
