@@ -204,7 +204,7 @@
         <mxCell id="legend-nat" value="NAT 转换 (宿主机)" style="line;strokeColor=#0000cc;dashed=1;html=1;fontSize=10;" parent="1" vertex="1">
           <mxGeometry x="40" y="130" width="180" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="HBXckXzOfRmCu2JFzfwC-1" value="虚拟服务器&lt;br&gt;私有IP: 192.168.7.100&lt;br&gt;绑定 EIP: 192.168.4.101" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1">
+        <mxCell id="HBXckXzOfRmCu2JFzfwC-1" value="虚拟服务器C2&lt;br&gt;私有IP: 192.168.7.100&lt;br&gt;绑定 EIP: 192.168.4.101" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;fontSize=11;" vertex="1" parent="1">
           <mxGeometry x="980" y="1470" width="160" height="60" as="geometry" />
         </mxCell>
         <mxCell id="HBXckXzOfRmCu2JFzfwC-5" value="" style="endArrow=classic;startArrow=classic;rounded=0;entryX=0.48;entryY=1.034;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.483;exitY=0.05;exitDx=0;exitDy=0;exitPerimeter=0;fontColor=#000000;strokeColor=#B85450;dashed=1;html=1;" edge="1" parent="1" source="HBXckXzOfRmCu2JFzfwC-1" target="vm-c1">
